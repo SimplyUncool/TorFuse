@@ -1,0 +1,21 @@
+{
+  "name": "torfuse",
+  "version": "0.1.0",
+  "description": "A TorBox-powered Stremio addon",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "start": "node dist/indenpx.js"
+  },
+  "dependencies": {
+    "@stremio-addon/sdk": "^1.0.0",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.2.0",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2"
+  }
+}
