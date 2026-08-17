@@ -5,6 +5,7 @@ import {
   storeConfig
 } from "./config.js";
 import { renderConfigPage } from "./config-page.js";
+import { renderLandingPage } from "./landing-page.js";
 import { router } from "./addon.js";
 
 const app = express();
@@ -15,6 +16,12 @@ app.use(
     extended: false
   })
 );
+
+app.get("/", (_req, res) => {
+  res.type("html").send(
+    renderLandingPage()
+  );
+});
 
 app.get("/configure", (_req, res) => {
   res.type("html").send(
