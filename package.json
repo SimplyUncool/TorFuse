@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "tsc",
-    "start": "node dist/indenpx.js"
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "@stremio-addon/sdk": "^1.0.0",
