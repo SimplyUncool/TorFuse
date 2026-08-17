@@ -29,19 +29,24 @@ npm install
 npm run dev
 ```
 
-TorFuse starts as a local web service. A reverse proxy or tunnel such as Cloudflare Tunnel can be used when testing the addon with Stremio.
-
 ## Configuration
 
 TorFuse uses a configuration page to generate a unique configuration for each installation.
 
 The TorBox API key is stored separately from the Stremio manifest URL and is not included directly in the manifest configuration.
 
+## Live Demo
+
+TorFuse is currently hosted on Render.
+
+Configuration:
+[https://torfuse.onrender.com/configure](https://torfuse.onrender.com/configure)
+
 ## Project Status
 
 TorFuse is currently under active development.
 
-The Stremio addon, configuration system, manifest generation, and TorBox API client are in place. Live TorBox API testing and the torrent discovery pipeline are still being developed.
+The Stremio addon, configuration system, manifest generation, TorBox API client, and hosted deployment are in place. Live TorBox API testing and the torrent discovery pipeline are still being developed.
 
 ## Production
 
