@@ -22,7 +22,12 @@ export const addon = new AddonBuilder({
       title: "TorFuse Configuration",
       required: true
     }
-  ]
+  ],
+  stremioAddonsConfig: {
+    issuer: "https://stremio-addons.net",
+    signature:
+      "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..-M26iEYrPCrci7-aG-vWIw.r3VO0OLhvNjQwCh14VZNvfpL0D23Kb26-gUuXR3feivOadovZE4bdlbaR3La7lfX57uGKzmnOzycoB34GpCpsgsnq4SSIpQuOT2MyBoJK3jBHjSgJ1nYH-GC_9-pRQlR.cuO_MzV0P71m2MZ0Lvdqyw"
+  }
 });
 
 addon.defineStreamHandler<TorFuseConfig>(
