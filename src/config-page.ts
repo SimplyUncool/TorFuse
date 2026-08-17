@@ -12,6 +12,14 @@ export function renderConfigPage(
   subtitle: string,
   content: string
 ): string {
+  return renderPage(title, subtitle, content);
+}
+
+export function renderPage(
+  title: string,
+  subtitle: string,
+  content: string
+): string {
   return `
 <!DOCTYPE html>
 <html lang="en">
@@ -124,9 +132,9 @@ export function renderConfigPage(
       background:
         radial-gradient(
           ellipse at center,
-          rgba(9, 9, 11, 0.15) 0%,
-          rgba(9, 9, 11, 0.5) 52%,
-          rgba(9, 9, 11, 0.94) 100%
+          rgba(9, 9, 11, 0.08) 0%,
+          rgba(9, 9, 11, 0.42) 52%,
+          rgba(9, 9, 11, 0.92) 100%
         );
 
       pointer-events: none;
@@ -161,20 +169,20 @@ export function renderConfigPage(
       position: relative;
       z-index: 10;
 
-      width: min(440px, calc(100% - 32px));
+      width: min(540px, calc(100% - 32px));
 
-      padding: 34px;
+      padding: 42px;
 
       border:
-        1px solid rgba(255, 255, 255, 0.1);
+        1px solid rgba(255, 255, 255, 0.11);
 
-      border-radius: 20px;
+      border-radius: 22px;
 
       background:
-        rgba(18, 18, 20, 0.82);
+        rgba(18, 18, 20, 0.64);
 
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
 
       box-shadow:
         0 24px 80px rgba(0, 0, 0, 0.55),
@@ -182,20 +190,20 @@ export function renderConfigPage(
     }
 
     .logo {
-      width: 52px;
-      height: 52px;
+      width: 58px;
+      height: 58px;
 
       display: grid;
       place-items: center;
 
-      margin-bottom: 22px;
+      margin-bottom: 24px;
 
-      border-radius: 14px;
+      border-radius: 16px;
 
       background: #ffffff;
       color: #09090b;
 
-      font-size: 26px;
+      font-size: 29px;
       font-weight: 900;
 
       box-shadow:
@@ -205,19 +213,19 @@ export function renderConfigPage(
     h1 {
       margin: 0;
 
-      font-size: 32px;
+      font-size: 42px;
       line-height: 1;
 
-      letter-spacing: -1px;
+      letter-spacing: -1.5px;
     }
 
     .subtitle {
-      margin: 10px 0 28px;
+      margin: 12px 0 28px;
 
       color: #a1a1aa;
 
-      line-height: 1.5;
-      font-size: 14px;
+      line-height: 1.6;
+      font-size: 15px;
     }
 
     label {
@@ -375,9 +383,47 @@ export function renderConfigPage(
       line-height: 1.5;
     }
 
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      margin-bottom: 24px;
+      padding: 7px 11px;
+
+      border:
+        1px solid rgba(74, 222, 128, 0.18);
+
+      border-radius: 999px;
+
+      background:
+        rgba(34, 197, 94, 0.07);
+
+      color: #86efac;
+
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .statusDot {
+      width: 6px;
+      height: 6px;
+
+      border-radius: 50%;
+
+      background: #4ade80;
+
+      box-shadow:
+        0 0 10px rgba(74, 222, 128, 0.7);
+    }
+
     @media (max-width: 520px) {
       .card {
-        padding: 25px;
+        padding: 28px;
+      }
+
+      h1 {
+        font-size: 36px;
       }
 
       .buttons {
